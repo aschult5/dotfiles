@@ -12,6 +12,8 @@ set smartcase
 set incsearch
 set hlsearch
 
+set nu
+
 if has('persistent_undo')
    set undofile
    set undodir=$HOME/.vim/undo
