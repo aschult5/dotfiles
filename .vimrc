@@ -2,8 +2,8 @@ autocmd ColorScheme * highlight Search ctermbg=DarkCyan ctermfg=LightGray
 colorscheme slate
 syntax enable
 
-set tabstop=3
-set shiftwidth=3
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 set ignorecase
