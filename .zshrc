@@ -155,4 +155,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="/run/media/aschultz/ENCRYPTUSB/dev/Nodele
 export ENDPOINTS_GAE_SDK="/opt/google-cloud-sdk/platform/google_appengine"
 
 export PATH=$PATH:/opt/Postman
+export PATH=$PATH:${HOME}/vendor/bin
+
+export PYTHONPATH=${PYTHONPATH}:${HOME}/.local/lib/python3.7/site-packages
 
