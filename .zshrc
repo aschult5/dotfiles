@@ -159,5 +159,3 @@ export PATH=$PATH:/opt/Postman
 export PATH=$PATH:${HOME}/vendor/bin
 export PATH=$PATH:${HOME}/.local/bin
 
-export PYTHONPATH=${PYTHONPATH}:${HOME}/.local/lib/python3.7/site-packages
-
