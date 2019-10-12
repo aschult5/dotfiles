@@ -145,17 +145,19 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
+export GOOGLE_CLOUD_SDK='${GOOGLE_CLOUD_SDK}'
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "${GOOGLE_CLOUD_SDK}/path.zsh.inc" ]; then . "${GOOGLE_CLOUD_SDK}/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi
-export GOOGLE_APPLICATION_CREDENTIALS="/run/media/aschultz/ENCRYPTUSB/dev/Nodeler-66c75a3889ac.json"
-export ENDPOINTS_GAE_SDK="/opt/google-cloud-sdk/platform/google_appengine"
+if [ -f "${GOOGLE_CLOUD_SDK}/completion.zsh.inc" ]; then . "${GOOGLE_CLOUD_SDK}/completion.zsh.inc"; fi
+export GOOGLE_APPLICATION_CREDENTIALS="/run/media/aschultz/ENCRYPTUSB/dev/Nodeler-2f4fa7ef94ff.json"
+export ENDPOINTS_GAE_SDK="${GOOGLE_CLOUD_SDK}/platform/google_appengine"
+export PYTHONPATH="${GOOGLE_CLOUD_SDK}/platform/google_appengine"
 
 export PATH=$PATH:/opt/Postman
 export PATH=$PATH:${HOME}/vendor/bin
+export PATH=$PATH:${HOME}/.local/bin
 
 export PYTHONPATH=${PYTHONPATH}:${HOME}/.local/lib/python3.7/site-packages
 
