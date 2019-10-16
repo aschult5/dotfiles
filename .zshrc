@@ -159,3 +159,4 @@ export PATH=$PATH:/opt/apps/bin
 export PATH=$PATH:${HOME}/vendor/bin
 export PATH=$PATH:${HOME}/.local/bin
 
+alias dog='highlight -O ansi --force'
