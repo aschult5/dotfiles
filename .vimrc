@@ -18,3 +18,6 @@ if has('persistent_undo')
    set undofile
    set undodir=$HOME/.vim/undo
 endif
+
+autocmd FileType yaml set tabstop=2
+autocmd FileType yaml set shiftwidth=2
