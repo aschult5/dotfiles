@@ -21,21 +21,20 @@ bindkey -e
 
 # The following lines were added by compinstall
 
-zstyle ':completion:*' completer _complete _ignored _match _correct _approximate _prefix
-zstyle ':completion:*' completions 0
-zstyle ':completion:*' expand prefix suffix
-zstyle ':completion:*' file-sort name
-zstyle ':completion:*' format ' %F{blue}-- %d --%f'
-zstyle ':completion:*' glob 0
+zstyle ':completion:*' auto-description '%F{yellow}-- %d --%f'
+zstyle ':completion:*' completer _complete _ignored _match _correct _prefix
+zstyle ':completion:*' format '%F{blue}-- %d --%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' ignore-parents parent pwd
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+r:|[._-]=** r:|=**' '+l:|=* r:|=*'
-zstyle ':completion:*' max-errors 1
+zstyle ':completion:*' list-suffixes true
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}'
+zstyle ':completion:*' match-original both
+zstyle ':completion:*' max-errors 2
 zstyle ':completion:*' menu select=1
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %l%s
-zstyle ':completion:*' substitute 0
+zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' verbose true
 zstyle :compinstall filename '/home/aschultz/.zshrc'
 
@@ -80,6 +79,7 @@ unsetopt flowcontrol
 setopt LIST_AMBIGUOUS
 unsetopt MENU_COMPLETE
 setopt PUSHD_SILENT
+setopt COMPLETE_IN_WORD
 
 export GOOGLE_CLOUD_SDK=${HOME}/google-cloud-sdk
 # The next line updates PATH for the Google Cloud SDK.
