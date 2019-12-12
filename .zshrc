@@ -12,7 +12,7 @@ fi
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=10000
+HISTSIZE=50000
 SAVEHIST=10000
 setopt appendhistory autocd nomatch notify
 unsetopt beep
@@ -21,7 +21,7 @@ bindkey -e
 # The following lines were added by compinstall
 
 zstyle ':completion:*' auto-description '%F{yellow}-- %d --%f'
-zstyle ':completion:*' completer _complete _ignored _match _correct _prefix
+zstyle ':completion:*' completer _complete _ignored _match _correct _approximate
 zstyle ':completion:*' format '%F{blue}-- %d --%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' ignore-parents parent pwd
@@ -73,13 +73,12 @@ WORDCHARS=${WORDCHARS//[_.-\/]}
 setopt ALWAYS_TO_END      # Move cursor to the end of a completed word.
 setopt AUTO_LIST          # Automatically list choices on ambiguous completion.
 setopt AUTO_MENU
-setopt AUTO_PARAM_SLASH   # If completed parameter is a directory, add a trailing slash.
 setopt AUTO_REMOVE_SLASH
+setopt COMPLETE_IN_WORD
 unsetopt flowcontrol
 setopt LIST_AMBIGUOUS
 unsetopt MENU_COMPLETE
 setopt PUSHD_SILENT
-setopt COMPLETE_IN_WORD
 # End of Completion
 
 # Google Cloud
