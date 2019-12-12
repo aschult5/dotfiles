@@ -42,6 +42,11 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Prompt
+PROMPT='%B%(?.%F{green}√.%F{red}%?)%f%b %B%F{blue}%3~%f%b %(!.#.>) '
+RPROMPT='%*'
+# End prompt
+
 #
 # Key Bindings
 #
