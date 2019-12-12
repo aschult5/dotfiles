@@ -47,8 +47,6 @@ compinit
 # Key Bindings
 #
 bindkey '^g' accept-search
-bindkey '^[[1;5C' forward-word                        # [Ctrl-RightArrow] - move forward one word
-bindkey '^[[1;5D' backward-word                       # [Ctrl-LeftArrow] - move backward one word
 
 if [[ "${terminfo[kcbt]}" != "" ]]; then
   bindkey "${terminfo[kcbt]}" reverse-menu-complete   # [Shift-Tab] - move through the completion menu backwards
@@ -83,11 +81,6 @@ setopt LIST_AMBIGUOUS
 unsetopt MENU_COMPLETE
 setopt PUSHD_SILENT
 
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 export GOOGLE_CLOUD_SDK=${HOME}/google-cloud-sdk
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "${GOOGLE_CLOUD_SDK}/path.zsh.inc" ]; then . "${GOOGLE_CLOUD_SDK}/path.zsh.inc"; fi
@@ -97,10 +90,6 @@ if [ -f "${GOOGLE_CLOUD_SDK}/completion.zsh.inc" ]; then . "${GOOGLE_CLOUD_SDK}/
 export GOOGLE_APPLICATION_CREDENTIALS="/run/media/aschultz/ENCRYPTUSB/dev/Nodeler-2f4fa7ef94ff.json"
 export ENDPOINTS_GAE_SDK="${GOOGLE_CLOUD_SDK}/platform/google_appengine"
 export PYTHONPATH="${GOOGLE_CLOUD_SDK}/platform/google_appengine"
-
-export PATH=$PATH:/opt/apps/bin
-export PATH=$PATH:${HOME}/vendor/bin
-export PATH=$PATH:${HOME}/.local/bin
 
 alias dog='highlight -O ansi --force'
 
