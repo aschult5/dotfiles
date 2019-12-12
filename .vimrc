@@ -12,7 +12,7 @@ set smartcase
 set incsearch
 set hlsearch
 
-set nu
+set rnu
 
 if has('persistent_undo')
    set undofile
