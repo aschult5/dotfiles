@@ -72,6 +72,7 @@ setopt COMPLETE_IN_WORD
 unsetopt flowcontrol
 setopt LIST_AMBIGUOUS
 unsetopt MENU_COMPLETE
+setopt NO_NOMATCH
 setopt PUSHD_SILENT
 # End of Completion
 
