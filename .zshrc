@@ -15,7 +15,7 @@ bindkey -e
 # The following lines were added by compinstall
 
 zstyle ':completion:*' auto-description '%F{yellow}-- %d --%f'
-zstyle ':completion:*' completer _complete _ignored _match _correct _approximate
+zstyle ':completion:*' completer _complete _ignored _match _correct _approximate _prefix
 zstyle ':completion:*' format '%F{blue}-- %d --%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' ignore-parents parent pwd
