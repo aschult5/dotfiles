@@ -60,7 +60,7 @@ fi
 bindkey "^[[A" up-line-or-search
 bindkey "^[[B" down-line-or-search
 
-WORDCHARS=${WORDCHARS//[_.-\/]}
+WORDCHARS=${WORDCHARS//[_.\-\/]}
 # End of Key Bindings
 
 # Completion
