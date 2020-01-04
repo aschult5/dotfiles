@@ -27,3 +27,6 @@ endif
 
 autocmd FileType yaml set tabstop=2
 autocmd FileType yaml set shiftwidth=2
+
+" Disable ~ files
+set nobackup
