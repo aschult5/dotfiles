@@ -1,5 +1,11 @@
-autocmd ColorScheme * highlight Search ctermbg=DarkCyan ctermfg=LightGray
-colorscheme slate
+colorscheme nord
+set cursorline
+hi clear CursorLine
+augroup CLClear
+    autocmd! ColorScheme * hi clear CursorLine
+augroup END
+" set cursorcolumn
+
 syntax enable
 
 set tabstop=4
