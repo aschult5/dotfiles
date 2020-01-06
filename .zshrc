@@ -61,6 +61,8 @@ bindkey "^[[A" up-line-or-search
 bindkey "^[[B" down-line-or-search
 
 WORDCHARS=${WORDCHARS//[_.\-\/]}
+
+disable r
 # End of Key Bindings
 
 # Completion
@@ -84,6 +86,7 @@ if [ -f "${GOOGLE_CLOUD_SDK}/completion.zsh.inc" ]; then . "${GOOGLE_CLOUD_SDK}/
 
 # Aliases
 alias dog='highlight -O ansi --force'
+alias r='ranger'
 # End of Aliases
 
 # Plugins
