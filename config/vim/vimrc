@@ -1,3 +1,5 @@
+let &rtp = substitute(&rtp, "\\.vim", ".config/vim", "g")
+set viminfo+=n~/.config/vim/viminfo
 colorscheme nord
 set cursorline
 hi clear CursorLine
