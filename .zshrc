@@ -87,6 +87,7 @@ if [ -f "${GOOGLE_CLOUD_SDK}/completion.zsh.inc" ]; then . "${GOOGLE_CLOUD_SDK}/
 # Aliases
 alias dog='highlight -O ansi --force'
 alias r='ranger'
+alias l='ls -alh'
 # End of Aliases
 
 # Plugins
