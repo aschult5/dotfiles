@@ -1,0 +1,5 @@
+rofi.theme: /usr/share/rofi/themes/Arc-Dark.rasi
+rofi.kb-mode-next: Alt+l
+rofi.kb-mode-previous: Alt+h
+rofi.kb-row-up: Alt+k
+rofi.kb-row-down: Alt+j
