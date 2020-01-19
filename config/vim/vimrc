@@ -1,7 +1,14 @@
 let &packpath = substitute(&packpath, "\\.vim", ".config/vim", "g")
 let &rtp = substitute(&rtp, "\\.vim", ".config/vim", "g")
 set viminfo+=n~/.config/vim/viminfo
+
+" Colors
+let &t_8f = "\[38;2;%lu;%lu;%lum"
+let &t_8b = "\[48;2;%lu;%lu;%lum"
+set tgc
 colorscheme nord
+
+
 set cursorline
 hi clear CursorLine
 augroup CLClear
