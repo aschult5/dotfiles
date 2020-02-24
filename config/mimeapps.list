@@ -1,0 +1,6 @@
+[Removed Associations]
+application/pdf=gimp.desktop
+[Added Associations]
+application/pdf=firefox.desktop
+[Default Applications]
+application/pdf=firefox.desktop
