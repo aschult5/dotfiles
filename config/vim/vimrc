@@ -40,3 +40,6 @@ autocmd FileType yaml set shiftwidth=2
 
 " Disable ~ files
 set nobackup
+
+" Enable filetype plugins, e.g. vim-go
+filetype plugin on
