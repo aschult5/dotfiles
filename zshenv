@@ -3,4 +3,4 @@ export ZDOTDIR=$HOME/.config/zsh
 export HISTFILE=$ZDOTDIR/zsh_history
 export VIMINIT="source ${HOME}/.config/vim/vimrc"
 export PYTHONDONTWRITEBYTECODE=1
-export GOPATH=$HOME/dev/go
+export GOPATH=/opt/go
