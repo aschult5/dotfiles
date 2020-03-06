@@ -43,3 +43,8 @@ set nobackup
 
 " Enable filetype plugins, e.g. vim-go, and indent
 filetype plugin indent on
+
+" Toggle pastemode, i.e. don't autoindent pastes
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
