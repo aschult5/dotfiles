@@ -10,4 +10,4 @@ if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
    export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 fi
 
-export PATH=${HOME}/.local/bin:/opt/Typora:${GOPATH}/bin:${PATH}
+export PATH=${HOME}/.local/bin:/opt/Typora:/usr/local/go/bin:${GOPATH}/bin:${PATH}
