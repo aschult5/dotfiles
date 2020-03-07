@@ -18,6 +18,9 @@ augroup END
 
 syntax enable
 
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
