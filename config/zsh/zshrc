@@ -82,6 +82,7 @@ setopt PUSHD_SILENT
 export GOOGLE_CLOUD_SDK=${HOME}/vendor/google-cloud-sdk
 if [ -f "${GOOGLE_CLOUD_SDK}/path.zsh.inc" ]; then . "${GOOGLE_CLOUD_SDK}/path.zsh.inc"; fi
 if [ -f "${GOOGLE_CLOUD_SDK}/completion.zsh.inc" ]; then . "${GOOGLE_CLOUD_SDK}/completion.zsh.inc"; fi
+export PYTHONPATH=${GOOGLE_CLOUD_SDK}/platform/google_appengine:$PYTHONPATH
 # End of Google Cloud
 
 # Aliases
