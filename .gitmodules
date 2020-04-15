@@ -10,3 +10,6 @@
 [submodule "config/vim/pack/plugins/start/colorizer"]
 	path = config/vim/pack/plugins/start/colorizer
 	url = https://github.com/lilydjwg/colorizer
+[submodule "config/polybar"]
+	path = config/polybar
+	url = git@github.com:aschult5/polybar-nord-theme.git
