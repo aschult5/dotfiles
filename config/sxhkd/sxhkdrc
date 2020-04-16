@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show drun -modi drun -show-icons -sidebar-mode -terminal st
+	rofi -show drun -modi drun -location center -anchor center -show-icons -sidebar-mode -terminal st -height 600 -width 600
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -31,6 +31,10 @@ XF86AudioLowerVolume
     pactl set-sink-volume 0 -1000
 XF86AudioMute
     pactl set-sink-mute 0 toggle
+
+# power menu
+alt + ctrl + l
+    ${HOME}/.config/polybar/scripts/sysmenu
 
 #
 # bspwm hotkeys
