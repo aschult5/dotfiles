@@ -2,6 +2,12 @@
 
 sxhkd &
 
+compton &
+
+redshift &
+
+~/.config/polybar/launch.sh dark
+
 bspc monitor -d I II III IV V
 
 bspc config border_width         2
