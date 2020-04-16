@@ -1,4 +1,4 @@
-rofi.theme: /usr/share/rofi/themes/Arc-Dark.rasi
+rofi.theme: /usr/share/rofi/themes/rocket.rasi
 rofi.kb-mode-next: Alt+l
 rofi.kb-mode-previous: Alt+h
 rofi.kb-row-up: Alt+k
