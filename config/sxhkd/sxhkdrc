@@ -18,6 +18,12 @@ super + Escape
 super + q
     firefox
 
+# screenshot
+Print
+    scrot_select
+ctrl + Print
+    scrot_full
+
 # brightness
 XF86MonBrightnessUp
     xbacklight -inc 10

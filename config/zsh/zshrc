@@ -90,6 +90,11 @@ alias dog='highlight -O truecolor -s base16/nord --force'
 alias r='ranger'
 alias l='ls -lh'
 alias ll='ls -alh'
+scrot_file () {
+    echo "$(xdg-user-dir PICTURES)/scrot/$(date +%F_%T).png"
+}
+alias scrot_full="scrot $(scrot_file)"
+alias scrot_select="scrot -s $(scrot_file)"
 # End of Aliases
 
 # Plugins
