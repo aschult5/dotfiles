@@ -1,10 +1,20 @@
 #! /bin/sh
 
+killall -q -w sxhkd
 sxhkd &
 
-compton &
+killall -q -w picom
+picom -b &
 
-redshift &
+killall -q -w redshift
+redshift-gtk &
+
+killall -q -w udiskie
+udiskie -t -m nested
+
+# killall only matches 15 chars
+killall -q -w lxqt-policykit-
+lxqt-policykit-agent &
 
 ~/.config/polybar/launch.sh dark
 
