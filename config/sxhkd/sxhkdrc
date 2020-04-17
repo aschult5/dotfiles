@@ -18,6 +18,10 @@ super + Escape
 super + q
     firefox
 
+# launch file manager
+super + d
+    nautilus
+
 # screenshot
 Print
     scrot_select
