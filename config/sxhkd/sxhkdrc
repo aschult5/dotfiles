@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show drun -modi drun -location center -anchor center -show-icons -sidebar-mode -terminal st -height 600 -width 600
+	rofi -show drun -modi drun -location center -anchor center -show-icons -sidebar-mode -terminal st -height 600 -width 600 -font "Sans 14" -i
 
 # make sxhkd reload its configuration files:
 super + Escape
