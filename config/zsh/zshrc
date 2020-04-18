@@ -2,7 +2,7 @@
 # non-zsh specific
 #
 #colors
-source ~/.lscolors
+source ~/.config/lscolors
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
