@@ -100,9 +100,13 @@ super + {p,b,comma,period}
 super + {_,shift + }Tab
 	bspc node -f {next,prev}.local
 
-# focus the next/previous desktop in the current monitor
+# focus the next/previous desktop
+super + shift {slash,at}
+	bspc desktop -f {prev,next}
+
+# focus the next/previous occupied desktop
 super + {slash,at}
-	bspc desktop -f {prev,next}.local
+	bspc desktop -f {prev,next}.occupied
 
 # focus the last desktop
 super + dollar
