@@ -13,6 +13,9 @@ redshift-gtk &
 killall -q -w lxqt-policykit-
 lxqt-policykit-agent &
 
+killall -q -w udiskie
+udiskie -t -m nested &
+
 ~/.config/polybar/launch.sh dark
 
 bspc monitor -d I II III IV V
@@ -24,6 +27,3 @@ bspc config split_ratio           0.52
 bspc config borderless_monocle    false
 bspc config gapless_monocle       true
 bspc config focus_follows_pointer true
-
-killall -q -w udiskie
-udiskie -t -m nested
