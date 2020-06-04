@@ -16,6 +16,9 @@ lxqt-policykit-agent &
 killall -q -w udiskie
 udiskie -t -m nested &
 
+killall -q -w blueman-applet
+blueman-applet &
+
 ~/.config/polybar/launch.sh dark
 
 bspc monitor -d I II III IV V
