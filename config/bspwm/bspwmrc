@@ -3,21 +3,10 @@
 killall -q -w sxhkd
 sxhkd &
 
-killall -q -w picom
-picom -b &
+killall -q -w dunst
+dunst &
 
-killall -q -w redshift
-redshift-gtk &
-
-# killall only matches 15 chars
-killall -q -w lxqt-policykit-
-lxqt-policykit-agent &
-
-killall -q -w udiskie
-udiskie -t -m nested &
-
-killall -q -w blueman-applet
-blueman-applet &
+dex -a
 
 ~/.config/polybar/launch.sh dark
 
