@@ -53,3 +53,5 @@ set pastetoggle=<F2>
 set showmode
 
 set wrap!
+
+set guicursor=
