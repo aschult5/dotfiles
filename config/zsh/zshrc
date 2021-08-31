@@ -8,7 +8,7 @@ source ~/.config/lscolors
 HISTFILE=~/.histfile
 HISTSIZE=50000
 SAVEHIST=10000
-setopt appendhistory autocd nomatch notify
+setopt appendhistory autocd notify autopushd pushdsilent
 unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
@@ -75,15 +75,7 @@ unsetopt flowcontrol
 setopt LIST_AMBIGUOUS
 unsetopt MENU_COMPLETE
 setopt NO_NOMATCH
-setopt PUSHD_SILENT
 # End of Completion
-
-# Google Cloud
-export GOOGLE_CLOUD_SDK=${HOME}/vendor/google-cloud-sdk
-if [ -f "${GOOGLE_CLOUD_SDK}/path.zsh.inc" ]; then . "${GOOGLE_CLOUD_SDK}/path.zsh.inc"; fi
-if [ -f "${GOOGLE_CLOUD_SDK}/completion.zsh.inc" ]; then . "${GOOGLE_CLOUD_SDK}/completion.zsh.inc"; fi
-export PYTHONPATH=${GOOGLE_CLOUD_SDK}/platform/google_appengine:$PYTHONPATH
-# End of Google Cloud
 
 # Aliases
 alias dog='highlight -O truecolor -s base16/nord --force'
