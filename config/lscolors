@@ -52,6 +52,5 @@ ls_light_blue_background=104
 ls_light_purple_background=105
 ls_turquoise_background=106
 
-alias ls='noglob ls --color=auto'
 LS_COLORS="no=${ls_grey}:fi=${ls_grey}:di=${ls_light_purple}:ln=${ls_underlined};${ls_light_blue}:or=${ls_underlined};${ls_light_red}:mi=${ls_light_red}:ex=${ls_light_green}"
 export LS_COLORS
