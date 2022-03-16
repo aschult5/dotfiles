@@ -32,4 +32,3 @@ done
 
 # Misfits
 linkconfig $HOME/.config/zsh/.zshrc $BASE_DIR/config/zsh/zshrc
-linkconfig $HOME/.config/zsh/.zprofile $BASE_DIR/config/zsh/zprofile
