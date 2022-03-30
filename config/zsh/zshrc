@@ -8,35 +8,36 @@ source ~/.config/lscolors
 HISTFILE=~/.histfile
 HISTSIZE=50000
 SAVEHIST=10000
-setopt appendhistory autocd notify autopushd pushdsilent
+setopt appendhistory autocd notify autopushd pushdsilent nomatch extendedglob
 unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 
 zstyle ':completion:*' auto-description '%F{yellow}-- %d --%f'
-zstyle ':completion:*' completer _complete _ignored _match _correct _approximate _prefix
+zstyle ':completion:*' completer _expand _complete _match _correct _approximate _prefix
 zstyle ':completion:*' format '%F{blue}-- %d --%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' ignore-parents parent pwd
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
 zstyle ':completion:*' list-suffixes true
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}'
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 zstyle ':completion:*' match-original both
 zstyle ':completion:*' max-errors 2
 zstyle ':completion:*' menu select=1
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %l%s
 zstyle ':completion:*' squeeze-slashes true
+zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/aschultz/.zshrc'
+zstyle :compinstall filename '/home/aschultz/.config/zsh/.zshrc'
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
 # Prompt
-PROMPT='%B%(?.%F{green}√.%F{red}%?)%f%b %B%F{blue}%3~%f%b %(!.#.>) '
+PROMPT='%F{cyan}%h%f %B%(?.%F{green}√.%F{red}%?)%f%b %B%F{blue}%3~%f%b %(!.#.>) '
 RPROMPT='%*'
 # End prompt
 
@@ -78,7 +79,7 @@ setopt NO_NOMATCH
 # End of Completion
 
 # Aliases
-alias dog='highlight -O truecolor -s base16/nord --force'
+alias dog='highlight -O truecolor -s zenburn --force'
 alias r='ranger'
 alias l='ls -lh'
 alias ll='ls -alh'
@@ -91,4 +92,5 @@ alias scrot_select="scrot -s $(scrot_file)"
 
 # Plugins
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source ${ZDOTDIR}/zsh-autosuggestions/zsh-autosuggestions.zsh
 # End of Plugins

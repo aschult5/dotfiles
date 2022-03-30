@@ -1,5 +1,7 @@
 let &packpath = substitute(&packpath, "\\.vim", ".config/vim", "g")
 let &rtp = substitute(&rtp, "\\.vim", ".config/vim", "g")
+runtime ftdetect/*.vim
+
 set viminfo+=n~/.config/vim/viminfo
 
 " Colors
