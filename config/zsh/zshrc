@@ -78,9 +78,17 @@ unsetopt MENU_COMPLETE
 setopt NO_NOMATCH
 # End of Completion
 
+# ccache
+export CCACHE_DIR=/home/aschultz/dev/ccache
+export CCACHE_MAXSIZE=100G
+export CCACHE_COMPILERCHECK=content
+export ENABLE_CCACHE=true
+# End of ccache
+
 # Aliases
 alias dog='highlight -O truecolor -s zenburn --force'
 alias r='ranger'
+alias ls='ls --color=auto'
 alias l='ls -lh'
 alias ll='ls -alh'
 scrot_file () {
@@ -88,7 +96,10 @@ scrot_file () {
 }
 alias scrot_full="scrot $(scrot_file)"
 alias scrot_select="scrot -s $(scrot_file)"
+alias beep="paplay /usr/share/sounds/gnome/default/alerts/glass.ogg"
 # End of Aliases
+
+source ${ZDOTDIR}/work.zsh
 
 # Plugins
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null

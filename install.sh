@@ -22,7 +22,7 @@ function linkconfig() {
 	return 0
 }
 
-for config in bspwm sxhkd polybar rofi redshift.conf vim lscolors gtk-3.0 user-dirs.dirs; do
+for config in bspwm sxhkd polybar rofi redshift.conf vim lscolors gtk-3.0 user-dirs.dirs zsh/work.zsh; do
 	linkconfig $HOME/.config/$config $BASE_DIR/config/$config
 done
 
