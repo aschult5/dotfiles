@@ -26,9 +26,17 @@ for config in bspwm sxhkd polybar rofi redshift.conf vim lscolors gtk-3.0 user-d
 	linkconfig $HOME/.config/$config $BASE_DIR/config/$config
 done
 
-for dotfile in zshenv gitconfig gitignore gnupg/gpg.conf gnupg/gpg-agent.conf; do
+for dotfile in zshenv gitignore gnupg/gpg.conf gnupg/gpg-agent.conf; do
 	linkconfig $HOME/.${dotfile} $BASE_DIR/$dotfile
 done
 
 # Misfits
 linkconfig $HOME/.config/zsh/.zshrc $BASE_DIR/config/zsh/zshrc
+
+read -q "yn?Configure for work?"
+if [ "$yn" -eq "y" ]; then
+    linkconfig $HOME/.config/git/config $BASE_DIR/config/git/work.config
+else
+    linkconfig $HOME/.config/git/config $BASE_DIR/config/git/personal.config
+fi
+
