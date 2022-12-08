@@ -1,15 +1,12 @@
-let &packpath = substitute(&packpath, "\\.vim", ".config/vim", "g")
-let &rtp = substitute(&rtp, "\\.vim", ".config/vim", "g")
-runtime ftdetect/*.vim
+call plug#begin()
 
-set viminfo+=n~/.config/vim/viminfo
+" Plug 'fenetikm/falcon'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
-" Colors
-let &t_8f = "\[38;2;%lu;%lu;%lum"
-let &t_8b = "\[48;2;%lu;%lu;%lum"
-set tgc
-colorscheme nord
+call plug#end()
 
+colorscheme onehalfdark
+set termguicolors
 
 set cursorline
 hi clear CursorLine
@@ -19,9 +16,6 @@ augroup END
 " set cursorcolumn
 
 syntax enable
-
-hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE
 
 set tabstop=4
 set shiftwidth=4
@@ -35,19 +29,8 @@ set hlsearch
 
 set rnu
 
-if has('persistent_undo')
-   set undofile
-   set undodir=$HOME/.vim/undo
-endif
-
-autocmd FileType yaml set tabstop=2
-autocmd FileType yaml set shiftwidth=2
-
 " Disable ~ files
 set nobackup
-
-" Enable filetype plugins, e.g. vim-go, and indent
-filetype plugin indent on
 
 " Toggle pastemode, i.e. don't autoindent pastes
 nnoremap <F2> :set invpaste paste?<CR>
