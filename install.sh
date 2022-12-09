@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 echo $BASE_DIR
@@ -22,7 +22,7 @@ function linkconfig() {
 	return 0
 }
 
-for config in bspwm sxhkd polybar rofi redshift.conf vim lscolors gtk-3.0 user-dirs.dirs zsh/work.zsh; do
+for config in alacritty vim lscolors gtk-3.0 user-dirs.dirs zsh/work.zsh; do
 	linkconfig $HOME/.config/$config $BASE_DIR/config/$config
 done
 
@@ -33,8 +33,8 @@ done
 # Misfits
 linkconfig $HOME/.config/zsh/.zshrc $BASE_DIR/config/zsh/zshrc
 
-read -q "yn?Configure for work?"
-if [ "$yn" -eq "y" ]; then
+read -e -p "Configure for work?" YN
+if [ "$YN" = "y" ]; then
     linkconfig $HOME/.config/git/config $BASE_DIR/config/git/work.config
 else
     linkconfig $HOME/.config/git/config $BASE_DIR/config/git/personal.config
