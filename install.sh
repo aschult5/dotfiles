@@ -22,7 +22,7 @@ function linkconfig() {
 	return 0
 }
 
-for config in alacritty vim lscolors gtk-3.0 user-dirs.dirs zsh/work.zsh; do
+for config in alacritty vim lscolors git gtk-3.0 user-dirs.dirs; do
 	linkconfig $HOME/.config/$config $BASE_DIR/config/$config
 done
 
@@ -32,11 +32,4 @@ done
 
 # Misfits
 linkconfig $HOME/.config/zsh/.zshrc $BASE_DIR/config/zsh/zshrc
-
-read -e -p "Configure for work?" YN
-if [ "$YN" = "y" ]; then
-    linkconfig $HOME/.config/git/config $BASE_DIR/config/git/work.config
-else
-    linkconfig $HOME/.config/git/config $BASE_DIR/config/git/personal.config
-fi
 
