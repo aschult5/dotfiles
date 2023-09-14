@@ -19,14 +19,18 @@ zstyle ':completion:*' completer _expand _complete _match _correct _approximate 
 zstyle ':completion:*' format '%F{blue}-- %d --%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' ignore-parents parent pwd
+zstyle ':completion:*' insert-unambiguous true
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' list-prompt '%SAt %p: Hit TAB for more, or the character to insert%s'
 zstyle ':completion:*' list-suffixes true
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 zstyle ':completion:*' match-original both
 zstyle ':completion:*' max-errors 2
-zstyle ':completion:*' menu select=1
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %l%s
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' old-list never
+zstyle ':completion:*' old-menu false
+zstyle ':completion:*' original false
+zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %l%s'
 zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
@@ -35,6 +39,11 @@ zstyle :compinstall filename '/home/aschultz/.config/zsh/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+zstyle ':autocomplete:*' fzf-completion yes
+zstyle ':autocomplete:*' min-delay 0.1
+
+# source ${ZDOTDIR}/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # Prompt
 PROMPT='%F{cyan}%h%f %B%(?.%F{green}√.%F{red}%?)%f%b %B%F{blue}%3~%f%b %(!.#.>) '
@@ -78,13 +87,6 @@ unsetopt MENU_COMPLETE
 setopt NO_NOMATCH
 # End of Completion
 
-# ccache
-export CCACHE_DIR=/home/aschultz/dev/ccache
-export CCACHE_MAXSIZE=100G
-export CCACHE_COMPILERCHECK=content
-export ENABLE_CCACHE=true
-# End of ccache
-
 # Aliases
 alias dog='highlight -O truecolor -s zenburn --force'
 alias r='ranger'
@@ -104,4 +106,6 @@ source ${ZDOTDIR}/work.zsh
 # Plugins
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source ${ZDOTDIR}/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
+# source ${ZDOTDIR}/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # End of Plugins

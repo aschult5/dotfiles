@@ -23,3 +23,7 @@ if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
 fi
 
 export PATH=${HOME}/.local/bin:/usr/sbin:${PATH}
+
+# for zsh-autocomplete
+skip_global_compinit=1
+

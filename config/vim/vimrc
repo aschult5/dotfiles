@@ -6,7 +6,7 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 call plug#end()
 
 colorscheme onehalfdark
-set termguicolors
+set notermguicolors
 
 set cursorline
 hi clear CursorLine
@@ -36,7 +36,5 @@ set nobackup
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
-
-set wrap!
 
 set guicursor=
