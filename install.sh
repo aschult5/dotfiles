@@ -26,7 +26,7 @@ for config in alacritty vim lscolors git gtk-3.0 user-dirs.dirs; do
 	linkconfig $HOME/.config/$config $BASE_DIR/config/$config
 done
 
-for dotfile in zshenv gitignore gnupg/gpg.conf gnupg/gpg-agent.conf; do
+for dotfile in zshenv gitignore gnupg/gpg.conf gnupg/gpg-agent.conf byobu; do
 	linkconfig $HOME/.${dotfile} $BASE_DIR/$dotfile
 done
 
