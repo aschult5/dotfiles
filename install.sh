@@ -33,3 +33,4 @@ done
 # Misfits
 linkconfig $HOME/.config/zsh/.zshrc $BASE_DIR/config/zsh/zshrc
 
+vim +PluginInstall +qall
