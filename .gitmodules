@@ -10,6 +10,3 @@
 [submodule "config/polybar"]
 	path = config/polybar
 	url = git@github.com:aschult5/polybar-nord-theme.git
-[submodule "config/zsh/zsh-autosuggestions"]
-	path = config/zsh/zsh-autosuggestions
-	url = git@github.com:zsh-users/zsh-autosuggestions.git
