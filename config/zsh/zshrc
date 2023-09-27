@@ -112,3 +112,5 @@ typeset -g ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 source /usr/share/doc/fzf/examples/completion.zsh
 # source ${ZDOTDIR}/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # End of Plugins
+
+_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
