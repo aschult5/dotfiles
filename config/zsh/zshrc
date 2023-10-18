@@ -8,7 +8,7 @@ source ~/.config/lscolors
 HISTFILE=~/.histfile
 HISTSIZE=50000
 SAVEHIST=10000
-setopt appendhistory autocd notify autopushd pushdsilent nomatch extendedglob
+setopt sharehistory autocd notify autopushd pushdsilent nomatch extendedglob histignoredups
 unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
