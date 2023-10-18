@@ -22,7 +22,7 @@ function linkconfig() {
 	return 0
 }
 
-for config in alacritty vim lscolors git gtk-3.0 user-dirs.dirs; do
+for config in alacritty vim lscolors git gtk-3.0; do
 	linkconfig $HOME/.config/$config $BASE_DIR/config/$config
 done
 
