@@ -101,7 +101,7 @@ alias scrot_select="scrot -s $(scrot_file)"
 alias beep="paplay /usr/share/sounds/gnome/default/alerts/glass.ogg"
 # End of Aliases
 
-if [ -f ${ZDOTDIR}/work.sh ]; then
+if [ -f ${ZDOTDIR}/work.zsh ]; then
     source ${ZDOTDIR}/work.zsh
 fi
 
@@ -112,3 +112,4 @@ typeset -g ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 source /usr/share/doc/fzf/examples/completion.zsh
 # source ${ZDOTDIR}/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # End of Plugins
+
