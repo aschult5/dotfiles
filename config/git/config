@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-	name = Andrew
+	name = Andrew Schultz
 	email = aschult5@gmail.com
 	signingkey = 7DCC2B9B5184B711
 [core]
