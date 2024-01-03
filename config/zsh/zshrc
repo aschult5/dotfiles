@@ -34,7 +34,7 @@ zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %
 zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/aschultz/.config/zsh/.zshrc'
+zstyle :compinstall filename "${HOME}/.config/zsh/.zshrc"
 
 autoload -Uz compinit
 compinit

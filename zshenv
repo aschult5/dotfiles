@@ -8,8 +8,7 @@ export GOPATH=$HOME/vendor/go
 test -e $HOME/.secrets/env && source $HOME/.secrets/env
 
 #ssh with gpg 
-GPG_TTY=$(tty)
-export GPG_TTY
+export GPG_TTY="$(tty)"
 if [ -z "$GPG_AGENT_INFO" ]; then
     eval "$(gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf)"
 fi
