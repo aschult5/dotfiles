@@ -6,3 +6,9 @@
 	signingkey = 7DCC2B9B5184B711
 [core]
 	excludesfile = /home/aschultz/.gitignore_global
+[alias]
+    br = branch
+    lol = log --oneline
+    st = status
+    amend = commit --amend
+    last = log -n 1
