@@ -117,3 +117,9 @@ source /usr/share/doc/fzf/examples/completion.zsh
 # source ${ZDOTDIR}/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # End of Plugins
 
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+# bun completions
+[ -s "${HOME}/.bun/_bun" ] && source "${HOME}/.bun/_bun"
