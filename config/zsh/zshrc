@@ -92,7 +92,7 @@ alias dog='highlight -O truecolor -s zenburn --force'
 alias r='ranger'
 alias ls='ls --color=auto'
 alias l='ls -lh'
-alias ll='ls -alh'
+alias ll='ls -alhrt'
 scrot_file () {
     echo "$(xdg-user-dir PICTURES)/scrot/$(date +%F_%T).png"
 }
@@ -105,8 +105,10 @@ if [ -f ${ZDOTDIR}/work.zsh ]; then
     source ${ZDOTDIR}/work.zsh
 fi
 
+# opam configuration
 if which opam > /dev/null; then
     eval $(opam env)
+    [[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 fi
 
 # Plugins
@@ -114,6 +116,7 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/nul
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 typeset -g ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 source /usr/share/doc/fzf/examples/completion.zsh
+source ${ZDOTDIR}/zsh-better-npm-completion/zsh-better-npm-completion.plugin.zsh
 # source ${ZDOTDIR}/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # End of Plugins
 
@@ -125,3 +128,17 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 if [ -s "${HOME}/.bun/_bun" ]; then
     source "${HOME}/.bun/_bun"
 fi
+
+# ssh
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+
+# opam configuration
+[[ ! -r /home/aschultz/.opam/opam-init/init.zsh ]] || source /home/aschultz/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(gh copilot alias -- zsh)"
