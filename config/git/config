@@ -5,7 +5,7 @@
 	email = aschult5@gmail.com
 	signingkey = 7DCC2B9B5184B711
 [core]
-	excludesfile = /home/aschultz/.gitignore_global
+	excludesfile = /home/aschultz/.gitignore
 [alias]
     br = branch
     lol = log --oneline
