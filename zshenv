@@ -28,3 +28,4 @@ export PATH=${HOME}/.local/bin:/usr/sbin:${PATH}
 # for zsh-autocomplete
 skip_global_compinit=1
 
+export XDG_DATA_DIRS=/var/lib/flatpak/exports/share/:${XDG_DATA_DIRS}
