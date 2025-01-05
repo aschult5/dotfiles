@@ -12,3 +12,4 @@
     st = status
     amend = commit --amend
     last = log -n 1
+    cp = cherry-pick
