@@ -43,8 +43,6 @@ compinit
 zstyle ':autocomplete:*' fzf-completion yes
 zstyle ':autocomplete:*' min-delay 0.1
 
-# source ${ZDOTDIR}/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
 # Prompt
 PROMPT='%F{cyan}%m%f %B%(?.%F{green}√.%F{red}%?)%f%b %B%F{blue}%3~%f%b %(!.#.$) '
 RPROMPT=''
@@ -114,11 +112,16 @@ if which opam > /dev/null; then
 fi
 
 # Plugins
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [ -d ${HOME}/.nix-profile ]; then
+    SHARE=${HOME}/.nix-profile/share
+else
+    SHARE=/usr/share
+fi
+source ${SHARE}/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ${SHARE}/zsh-better-npm-completion
+source ${SHARE}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 typeset -g ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
-source /usr/share/doc/fzf/examples/completion.zsh
-source ${ZDOTDIR}/zsh-better-npm-completion/zsh-better-npm-completion.plugin.zsh
+source ${SHARE}/fzf/completion.zsh
 # source ${ZDOTDIR}/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # End of Plugins
 
@@ -131,6 +134,6 @@ gpgconf --launch gpg-agent
 [[ ! -r /home/aschultz/.opam/opam-init/init.zsh ]] || source /home/aschultz/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" || true # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" || true # This loads nvm bash_completion
 
