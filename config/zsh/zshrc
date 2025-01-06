@@ -96,7 +96,6 @@ scrot_file () {
 }
 alias scrot_full="scrot $(scrot_file)"
 alias scrot_select="scrot -s $(scrot_file)"
-alias bat=batcat
 alias beep="paplay /usr/share/sounds/gnome/default/alerts/drip.ogg"
 alias cdtmp='pushd $(mktemp -d)'
 # End of Aliases
