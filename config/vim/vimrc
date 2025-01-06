@@ -34,7 +34,7 @@ set smartcase
 set incsearch
 set hlsearch
 
-set rnu
+set nu
 
 " Disable ~ files
 set nobackup
