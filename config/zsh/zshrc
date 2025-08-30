@@ -136,3 +136,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" || true # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" || true # This loads nvm bash_completion
 
+
+SECRETS_CONFIG="/home/aschultz/.config/zsh/secrets.zsh"
+if [ -f $SECRETS_CONFIG ]; then
+    . $SECRETS_CONFIG
+fi
+
+
+alias claude="/home/aschultz/.claude/local/claude"

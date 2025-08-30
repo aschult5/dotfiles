@@ -33,3 +33,6 @@ opacity = 0.98
 [window.dimensions]
 columns = 130
 lines = 28
+
+[env]
+TERM = "xterm-256color"

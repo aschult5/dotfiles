@@ -6,10 +6,26 @@
 	signingkey = 7DCC2B9B5184B711
 [core]
 	excludesfile = /home/aschultz/.gitignore
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+
+[merge]
+    conflictStyle = zdiff3
+
 [alias]
     br = branch
     lol = log --oneline
     st = status
     amend = commit --amend
+    amendC = commit --amend -C HEAD
     last = log -n 1
     cp = cherry-pick
+
+[init]
+	defaultBranch = main
